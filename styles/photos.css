@@ -1,0 +1,112 @@
+.photo-card {
+    background-color: #1d3e81;
+    color: #E8EFF0;
+    padding: 0.5rem 2rem 1.5rem 2rem;
+    border-radius: 2rem;
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+.photo-card a {
+    color: #E8EFF0;
+}
+
+.photo-card img {
+    width: 100%;
+}
+
+.photo-card p {
+    text-align: justify;
+}
+
+.photo-card .content {
+    display: block;
+    text-align: center;
+}
+
+/* Your code here */
+@media screen and (min-width: 820px) {
+    .photo-card .content {
+        display: flex;
+        gap: 10px;
+    }
+
+    .photo-card a {
+        float: left;
+    }
+
+    .photo-card h3 {
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 1220px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-auto-flow: row;
+        gap: 10px;
+    }
+
+    .photo-card:last-child {
+        grid-column: 2 / 1;
+    }
+
+    .photo-card .content {
+        flex-direction: column;
+    }
+
+    .photo-card a {
+        float: center;
+    }
+
+    .photo-card h3 {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .photo-card .content {
+        flex-direction: row;
+    }
+
+    .photo-card h3 {
+        text-align: left;
+    }
+}
+
+@media print {
+    .photo-card .content {
+        display: flex;
+        gap: 10px;
+    }
+
+    header,
+    .photo-card a,
+    h2 {
+        display: none;
+    }
+
+}
+
+@media print and (orientation: landscape) {
+    .photo-card .content {
+        flex-direction: row;
+    }
+
+    .photo-card {
+        page-break-after: always;
+    }
+
+    header,
+    .photo-card a,
+    h2 {
+        display: none;
+    }
+
+    .photo-card h3 {
+        text-align: left;
+    }
+
+}

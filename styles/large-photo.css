@@ -1,0 +1,38 @@
+body {
+    background-color: #1d3e81;
+    color: #E8EFF0;
+    text-align: center;
+}
+
+img {
+    width: 50%;
+}
+
+a {
+    color: #E8EFF0;
+}
+
+a.backButton {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    z-index: 1;
+    text-decoration: none;
+}
+
+/* Your code here */
+@media print {
+    body {
+        background-color: unset;
+        color: black;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .notPrinted,
+    a.backButton {
+        display: none;
+    }
+}
